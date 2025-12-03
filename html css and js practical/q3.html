@@ -1,0 +1,29 @@
+<!-- q3 create a box with padding margin border and a fixed width hide the box on screens below 500px and show it above 500px  -->
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+   
+   .box {
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid black;
+  background-color: lightgray;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .box {
+    display: none;
+  }
+}
+  </style>
+</head>
+  <body>
+    <div class="container"></div>
+  </body>
+  </html>

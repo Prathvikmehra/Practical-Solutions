@@ -1,0 +1,36 @@
+<!-- q2 create a 3x2 layout using css grid with diffrent backgorund colors -->
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    .grid {
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d e f";
+  gap: 10px;
+}
+
+.a { grid-area: a; background: red; }
+.b { grid-area: b; background: blue; }
+.c { grid-area: c; background: green; }
+.d { grid-area: d; background: orange; }
+.e { grid-area: e; background: purple; }
+.f { grid-area: f; background: yellow; }
+
+ </style>
+</head>
+ <body>
+    <div class="grid">
+  <div class="a">A</div>
+  <div class="b">B</div>
+  <div class="c">C</div>
+  <div class="d">D</div>
+  <div class="e">E</div>
+  <div class="f">F</div>
+</div>
+ </body>
+ </html>
