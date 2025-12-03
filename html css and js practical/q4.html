@@ -1,0 +1,38 @@
+<!-- q4 create a + and - button to increase and decrease a number on page save the updated number in local storage so it always remain same after refresh -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="counter-container">
+        <button id="minus">-</button>
+        <p id="number">0</p>
+        <button id="plus">+</button>
+    </div>
+<script >
+    const numberDisplay = document.getElementById("number");
+const plusBtn = document.getElementById("plus");
+const minusBtn = document.getElementById("minus");
+let count;
+if (localStorage.getItem("count") === null) {
+    count = 0;
+} else {
+    count = Number(localStorage.getItem("count"));
+}
+numberDisplay.textContent = count;
+plusBtn.addEventListener("click", function () {
+    count = count + 1;
+    numberDisplay.textContent = count;
+    localStorage.setItem("count", count);
+});
+minusBtn.addEventListener("click", function () {
+    count = count - 1;
+    numberDisplay.textContent = count;
+    localStorage.setItem("count", count);
+});
+</script>
+</body>
+</html>
